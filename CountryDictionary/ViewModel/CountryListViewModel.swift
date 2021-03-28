@@ -7,7 +7,7 @@
 
 import Foundation
 class CountryListViewModel: ObservableObject {
-    @Published var filterWord = ""
+    @Published var filterWord = Constants.EMPTY
     @Published var countries = [CountryTop]()
     @Published var isFetching = false
     @Published var showingError = false
@@ -33,7 +33,7 @@ class CountryListViewModel: ObservableObject {
     }
     
     func getFilteredCountries() -> [CountryTop] {
-        if filterWord == "" {
+        if filterWord == Constants.EMPTY {
             return countries
         }
         var filteredCountries = [CountryTop]()

@@ -39,32 +39,32 @@ class CountryDetailPageViewModel: ObservableObject {
     }
     
     func getName() -> String {
-        guard let _detailInfo = detailInfo else { return "----" }
+        guard let _detailInfo = detailInfo else { return Constants.NON_DATA }
         return _detailInfo.name
     }
     
     func getCapitalCity() -> String {
-        guard let capital = detailInfo?.capitalCity else { return "----" }
+        guard let capital = detailInfo?.capitalCity else { return Constants.NON_DATA }
         return capital
     }
     
     func getCurrency() -> String {
-        guard let currency = detailInfo?.currency else { return "----" }
+        guard let currency = detailInfo?.currency else { return Constants.NON_DATA }
         return currency
     }
     
     func getEmoji() -> String {
-        guard let _detailInfo = detailInfo else { return "----" }
+        guard let _detailInfo = detailInfo else { return Constants.NON_DATA }
         return _detailInfo.flag
     }
     
     func getPhoneCode() -> String {
-        guard let _detailInfo = detailInfo else { return "----" }
+        guard let _detailInfo = detailInfo else { return Constants.NON_DATA }
         return _detailInfo.phoneCode
     }
     
     func getContinent() -> String {
-        guard let _detailInfo = detailInfo else { return "----" }
+        guard let _detailInfo = detailInfo else { return Constants.NON_DATA }
         return _detailInfo.continent
     }
     

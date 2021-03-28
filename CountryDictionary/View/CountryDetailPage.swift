@@ -17,17 +17,19 @@ struct CountryDetailPage: View {
                         .font(.largeTitle)
                         .wideStyle()
                     VStack(spacing: 0) {
-                        VStack(spacing: 0) {
-                            Spacer().frame(height: 5)
-                            Text("Capital City")
-                                .wideStyle()
-                            Text(viewModel.getCapitalCity())
-                                .wideStyle()
-                                .background(Color.white)
-                                .padding(5)
+                        if viewModel.hasCapital {
+                            VStack(spacing: 0) {
+                                Spacer().frame(height: 5)
+                                Text("Capital City")
+                                    .wideStyle()
+                                Text(viewModel.getCapitalCity())
+                                    .wideStyle()
+                                    .background(Color.white)
+                                    .padding(5)
+                            }
+                            .background(Color.green)
+                            .padding(5)
                         }
-                        .background(Color.green)
-                        .padding(5)
                         VStack(spacing: 0) {
                             Spacer().frame(height: 5)
                             Text("Phone Code")
@@ -39,17 +41,19 @@ struct CountryDetailPage: View {
                         }
                         .background(Color.blue)
                         .padding(5)
-                        VStack(spacing: 0) {
-                            Spacer().frame(height: 5)
-                            Text("Currency")
-                                .wideStyle()
-                            Text(viewModel.getCurrency())
-                                .wideStyle()
-                                .background(Color.white)
-                                .padding(5)
+                        if viewModel.hasCurrency {
+                            VStack(spacing: 0) {
+                                Spacer().frame(height: 5)
+                                Text("Currency")
+                                    .wideStyle()
+                                Text(viewModel.getCurrency())
+                                    .wideStyle()
+                                    .background(Color.white)
+                                    .padding(5)
+                            }
+                            .background(Color.red)
+                            .padding(5)
                         }
-                        .background(Color.red)
-                        .padding(5)
                         VStack(spacing: 0) {
                             Spacer().frame(height: 5)
                             Text("Continent")

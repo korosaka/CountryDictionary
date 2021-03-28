@@ -13,6 +13,12 @@ class CountryDetailPageViewModel: ObservableObject {
     
     let code: String
     let repository: CountryRepository
+    var hasCapital: Bool {
+        return getCapitalCity() != Constants.NON_DATA
+    }
+    var hasCurrency: Bool {
+        return getCurrency() != Constants.NON_DATA
+    }
     var hasStates: Bool {
         return getStates().count > 0
     }

@@ -7,7 +7,6 @@
 
 import Foundation
 struct CountryTop {
-    //MARK: TODO is "id" needed??
     let id = UUID()
     let code: String
     let name: String

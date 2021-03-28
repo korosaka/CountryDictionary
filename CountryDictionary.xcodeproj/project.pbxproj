@@ -30,6 +30,9 @@
 		88E77D7A261031200019DBB3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77D79261031200019DBB3 /* Network.swift */; };
 		88E77D7D2610316E0019DBB3 /* CountryAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77D7C2610316E0019DBB3 /* CountryAPIRepository.swift */; };
 		88E77D80261036A50019DBB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77D7F261036A50019DBB3 /* Constants.swift */; };
+		88E77D842610842D0019DBB3 /* CountrySingleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77D832610842D0019DBB3 /* CountrySingleContent.swift */; };
+		88E77D8826108B5A0019DBB3 /* LanguagesContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77D8726108B5A0019DBB3 /* LanguagesContent.swift */; };
+		88E77D8B26108D240019DBB3 /* StatesContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77D8A26108D240019DBB3 /* StatesContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		88E77D79261031200019DBB3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		88E77D7C2610316E0019DBB3 /* CountryAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIRepository.swift; sourceTree = "<group>"; };
 		88E77D7F261036A50019DBB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		88E77D832610842D0019DBB3 /* CountrySingleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySingleContent.swift; sourceTree = "<group>"; };
+		88E77D8726108B5A0019DBB3 /* LanguagesContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesContent.swift; sourceTree = "<group>"; };
+		88E77D8A26108D240019DBB3 /* StatesContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +136,9 @@
 		88E77D3626101F340019DBB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88E77D82261083E60019DBB3 /* CountryDetail */,
 				88E77D592610222B0019DBB3 /* CountryList */,
 				88E77D4B261020DE0019DBB3 /* Common */,
-				88E77D56261021DD0019DBB3 /* CountryDetailPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +188,25 @@
 				88E77D5E261022820019DBB3 /* CountryList.swift */,
 			);
 			path = CountryList;
+			sourceTree = "<group>";
+		};
+		88E77D82261083E60019DBB3 /* CountryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				88E77D8D26108EBA0019DBB3 /* EachContent */,
+				88E77D56261021DD0019DBB3 /* CountryDetailPage.swift */,
+			);
+			path = CountryDetail;
+			sourceTree = "<group>";
+		};
+		88E77D8D26108EBA0019DBB3 /* EachContent */ = {
+			isa = PBXGroup;
+			children = (
+				88E77D832610842D0019DBB3 /* CountrySingleContent.swift */,
+				88E77D8726108B5A0019DBB3 /* LanguagesContent.swift */,
+				88E77D8A26108D240019DBB3 /* StatesContent.swift */,
+			);
+			path = EachContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +310,7 @@
 			files = (
 				88E77D4126101FF70019DBB3 /* CountryTop.swift in Sources */,
 				88E77D3E26101FC50019DBB3 /* CountryRepository.swift in Sources */,
+				88E77D842610842D0019DBB3 /* CountrySingleContent.swift in Sources */,
 				88E77D7A261031200019DBB3 /* Network.swift in Sources */,
 				88E77D542610219C0019DBB3 /* CountryDetailPageViewModel.swift in Sources */,
 				88E77D2126101DA00019DBB3 /* AppDelegate.swift in Sources */,
@@ -297,6 +323,8 @@
 				88E77D7D2610316E0019DBB3 /* CountryAPIRepository.swift in Sources */,
 				88E77D2526101DA00019DBB3 /* ContentView.swift in Sources */,
 				88E77D512610213F0019DBB3 /* MyIndicator.swift in Sources */,
+				88E77D8826108B5A0019DBB3 /* LanguagesContent.swift in Sources */,
+				88E77D8B26108D240019DBB3 /* StatesContent.swift in Sources */,
 				88E77D4D261020FE0019DBB3 /* MyModifiers.swift in Sources */,
 				88E77D5F261022820019DBB3 /* CountryList.swift in Sources */,
 				88E77D49261020650019DBB3 /* DummyCountryRepository.swift in Sources */,

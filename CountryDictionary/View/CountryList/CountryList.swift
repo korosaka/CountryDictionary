@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CountryList: View {
+    let REQUIREING_MESSAGE = "enter country name"
     @ObservedObject var viewModel: CountryListViewModel
     var body: some View {
         NavigationView {
             ZStack {
                 VStack(spacing: 0) {
-                    TextField("enter country name",
+                    TextField(REQUIREING_MESSAGE,
                               text: $viewModel.filterWord)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .sidePadding(size: 20)
@@ -27,16 +28,16 @@ struct CountryList: View {
                     Spacer()
                 }
                 .alert(isPresented: $viewModel.showingError) {
-                    Alert(title: Text("ERROR"),
-                          message: Text("Loding data was failed."),
-                          dismissButton: .default(Text("CLOSE"))
+                    Alert(title: Text(Constants.TITLE_ERROR),
+                          message: Text(Constants.LOADING_ERROR_MESSAGE),
+                          dismissButton: .default(Text(Constants.CLOSE))
                     )
                 }
                 if viewModel.isFetching {
                     MyIndicator()
                 }
             }
-            .navigationBarTitle("Country Dictionary", displayMode: .inline)
+            .navigationBarTitle(Constants.APP_TITLE, displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

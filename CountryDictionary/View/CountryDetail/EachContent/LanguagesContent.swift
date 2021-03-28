@@ -16,13 +16,18 @@ struct LanguagesContent: View {
             Text(LANGUAGES)
                 .wideStyle()
             Spacer().frame(height: 5)
-            ForEach(languages, id: \.self) {
-                Text($0).wideStyle()
+            VStack(spacing: 0) {
+                ForEach(languages, id: \.self) {
+                    Text($0).bold().wideStyle()
+                }
             }
             .background(Color.white)
+            .cornerRadius(10)
         }
         .padding(5)
         .background(Color.purple)
+        .cornerRadius(10)
+        .shadow(color: .black, radius: 1)
     }
 }
 

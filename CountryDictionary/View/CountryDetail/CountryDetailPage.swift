@@ -13,8 +13,6 @@ struct CountryDetailPage: View {
     let CURRENCY = "Currency"
     let CONTINENT = "Continent"
     
-    
-    
     @ObservedObject var viewModel: CountryDetailPageViewModel
     var body: some View {
         ZStack {
@@ -23,38 +21,36 @@ struct CountryDetailPage: View {
                     Text(viewModel.getEmoji())
                         .font(.largeTitle)
                         .wideStyle()
-                    VStack(spacing: 0) {
-                        if viewModel.hasCapital {
-                            CountrySingleContent(title: CAPITAL,
-                                                 data: viewModel.getCapitalCity(),
-                                                 color: .green)
-                                .padding(5)
-                        }
-                        CountrySingleContent(title: PHONE,
-                                             data: viewModel.getPhoneCode(),
-                                             color: .blue)
+                    if viewModel.hasCapital {
+                        CountrySingleContent(title: CAPITAL,
+                                             data: viewModel.getCapitalCity(),
+                                             color: .green)
                             .padding(5)
-                        if viewModel.hasCurrency {
-                            CountrySingleContent(title: CURRENCY,
-                                                 data: viewModel.getCurrency(),
-                                                 color: .red)
-                                .padding(5)
-                        }
-                        CountrySingleContent(title: CONTINENT,
-                                             data: viewModel.getContinent(),
-                                             color: .yellow)
-                            .padding(5)
-                        
-                        if viewModel.hasStates {
-                            StatesContent(states: viewModel.getStates())
-                                .padding(5)
-                        }
-                        if viewModel.hasLanguages {
-                            LanguagesContent(languages: viewModel.getLanguages())
-                                .padding(5)
-                        }
-                        Spacer()
                     }
+                    CountrySingleContent(title: PHONE,
+                                         data: viewModel.getPhoneCode(),
+                                         color: .blue)
+                        .padding(5)
+                    if viewModel.hasCurrency {
+                        CountrySingleContent(title: CURRENCY,
+                                             data: viewModel.getCurrency(),
+                                             color: .red)
+                            .padding(5)
+                    }
+                    CountrySingleContent(title: CONTINENT,
+                                         data: viewModel.getContinent(),
+                                         color: .yellow)
+                        .padding(5)
+                    
+                    if viewModel.hasStates {
+                        StatesContent(states: viewModel.getStates())
+                            .padding(5)
+                    }
+                    if viewModel.hasLanguages {
+                        LanguagesContent(languages: viewModel.getLanguages())
+                            .padding(5)
+                    }
+                    Spacer()
                 }
             }
             .background(Color.gray)

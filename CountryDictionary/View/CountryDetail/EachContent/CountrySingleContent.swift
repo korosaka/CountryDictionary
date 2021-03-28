@@ -17,11 +17,15 @@ struct CountrySingleContent: View {
             Text(title)
                 .wideStyle()
             Text(data)
+                .bold()
                 .wideStyle()
                 .background(Color.white)
+                .cornerRadius(10)
                 .padding(5)
         }
         .background(color)
+        .cornerRadius(10)
+        .shadow(color: .black, radius: 1)
     }
 }
 

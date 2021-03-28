@@ -18,14 +18,17 @@ struct StatesContent: View {
                 .wideStyle()
             ScrollView(.vertical) {
                 ForEach(states, id: \.self) {
-                    Text($0).wideStyle()
+                    Text($0).bold().wideStyle()
                 }
             }
             .frame(height: 150)
             .background(Color.white)
+            .cornerRadius(10)
             .padding(5)
         }
         .background(Color.pink)
+        .cornerRadius(10)
+        .shadow(color: .black, radius: 1)
     }
 }
 

@@ -1,5 +1,6 @@
-# UI
-<img src="https://github.com/korosaka/source_image/blob/main/country_dictionary/IMG_0108.PNG" width="250px"><img src="https://github.com/korosaka/source_image/blob/main/country_dictionary/IMG_0109.PNG" width="250px"><img src="https://github.com/korosaka/source_image/blob/main/country_dictionary/IMG_0110.PNG" width="250px"><img src="https://github.com/korosaka/source_image/blob/main/country_dictionary/IMG_0111.PNG" width="250px"><img src="https://github.com/korosaka/source_image/blob/main/country_dictionary/IMG_0112.PNG" width="250px">
+# About
+![Screen shots](https://github.com/korosaka/source_image/blob/main/country_dictionary/country_dictionary_screenshots.png)
+Using this app, user can research informaton of countries all over the world.
 
 # Supporting Version
 - min: iOS 14.0
